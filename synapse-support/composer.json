@@ -1,0 +1,52 @@
+{
+    "name": "synapse-support/synapseindia",
+    "type": "library",
+    "version": "1.1.1",
+    "keywords": [
+        "WordPress",
+        "Customizer"
+    ],
+    "description": "Create API and onfido auth",
+    "homepage": "https://www.synapseindia.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "synapseindia",
+            "email": "sourav@synapseco.com"
+        }
+    ],
+    "repositories": [
+        {
+          "type": "vcs",
+          "url": "https://github.com/onfido/api-php-client.git"
+        },
+        {
+          "type": "vcs",
+          "url": "https://github.com/stripe/stripe-php.git"
+        }
+    ],
+    "config": {
+        "vendor-dir": "vendor",
+        "allow-plugins": {
+            "composer/installers": true
+        }
+    },
+    "autoload": {
+        "psr-4": {
+            "Sycustom\\api\\":[
+                "sycustom/apis"
+            ],
+            "Sycustom\\onfido\\":[
+                "sycustom/onfidos"
+            ],
+            "Sycustom\\mbains\\":[
+                "sycustom/mbains"
+            ]
+        }
+    },
+    "require": {
+        "php": ">=7.0",
+        "onfido/api-php-client": "^6.7.0",
+        "stripe/stripe-php": "^10.15"
+    }
+}
